@@ -7,19 +7,23 @@ import 'package:shopywell/view/home/widgets/icon_text.dart';
 Widget allFeatured(BuildContext context) {
   return Column(
     children: [
-      Row(
-        children: [
-          Text(
-            'All Featured',
-            style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18.sp),
-          ),
-          Spacer(),
-          iconTextButton(icon: AppIcons.filter, text: 'Sort'),
-          iconTextButton(icon: AppIcons.sort, text: 'Filter'),
-        ],
+      Padding(
+        padding: const EdgeInsets.symmetric(vertical: 20),
+        child: Row(
+          children: [
+            Text(
+              'All Featured',
+              style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18.sp),
+            ),
+            Spacer(),
+            iconTextButton(icon: AppIcons.filter, text: 'Sort'),
+            SizedBox(width: 5.w,),
+            iconTextButton(icon: AppIcons.sort, text: 'Filter'),
+          ],
+        ),
       ),
       SizedBox(
-        height: 200.h,
+        height: 100.h,
         child: ListView.separated(
           padding: EdgeInsets.symmetric(vertical: 10.h),
           separatorBuilder: (context, index) => SizedBox(width: 10.w),

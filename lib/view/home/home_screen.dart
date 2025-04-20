@@ -4,8 +4,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shopywell/core/constants.dart';
 import 'package:shopywell/view/home/widgets/all_featured_area.dart';
 import 'package:shopywell/view/home/widgets/appbar.dart';
+import 'package:shopywell/view/home/widgets/deal_day.dart';
 import 'package:shopywell/view/home/widgets/icon_text.dart';
 import 'package:shopywell/view/home/widgets/searchfield.dart';
+import 'package:shopywell/view/home/widgets/slider.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -17,7 +19,14 @@ class HomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(10.0),
-          child: Column(children: [searchField(), allFeatured(context)]),
+          child: Column(
+            children: [
+              searchField(),
+              allFeatured(context),
+              slider(),
+              dealOfTheDayCard(),
+            ],
+          ),
         ),
       ),
     );

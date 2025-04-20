@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:shopywell/view/authentication/forgotpassword.dart';
 
 class AppColor {
   static const grey = Color(0xFFA8A8A9);
@@ -9,7 +8,7 @@ class AppColor {
   static const textblack = Color(0xFF000000);
   static const textFieldFill = Color(0XffF3F3F3);
   static const textFieldDarkGrey = Color(0xFF626262);
-  static const successColor = 0xFF4CAF50;
+  static const blue = Color(0XFF4392F9);
 }
 
 class AppImages {
