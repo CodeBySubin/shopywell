@@ -1,13 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:shopywell/core/constants.dart';
 
-Widget dealOfTheDayCard() {
+Widget dealOfTheDayCard({required void Function()? onPressed,required String title,required String countdownTimerText,required IconData icon,required Color color} ) {
   return Container(
     height: 60.h,
     decoration: BoxDecoration(
-      color: AppColor.blue,
+      color: color,
       borderRadius: BorderRadius.circular(8),
     ),
     child: Padding(
@@ -20,7 +18,7 @@ Widget dealOfTheDayCard() {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Deal of the Day",
+             title,
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 16.sp,
@@ -32,10 +30,10 @@ Widget dealOfTheDayCard() {
                   children: [
                     WidgetSpan(
                       alignment: PlaceholderAlignment.middle,
-                      child: Icon(Icons.alarm, size: 13, color: Colors.white),
+                      child: Icon(icon, size: 13, color: Colors.white),
                     ),
                     TextSpan(
-                      text: " 22h 55m 20s remaining",
+                      text:countdownTimerText,
                       style: TextStyle(
                         fontSize: 12.sp,
                         fontWeight: FontWeight.w400,
@@ -48,10 +46,11 @@ Widget dealOfTheDayCard() {
           ),
 
           OutlinedButton(
-            onPressed: () {},
+            onPressed: onPressed,
             style: OutlinedButton.styleFrom(
               minimumSize: Size(70.w, 28.h),
               side: BorderSide(color: Colors.white),
+                  padding: EdgeInsets.symmetric(horizontal: 9.w),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(4),
               ),

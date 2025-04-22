@@ -5,6 +5,7 @@ import 'package:shopywell/core/constants.dart';
 
 PreferredSizeWidget appBar(BuildContext context) {
   return AppBar(
+    forceMaterialTransparency: true,
         leading:Container(
           margin: EdgeInsets.only(left: 10.w),
           decoration: BoxDecoration(
