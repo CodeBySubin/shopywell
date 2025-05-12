@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'package:shopywell/core/constants.dart';
-import 'package:shopywell/view/home/home.dart';
-import 'package:shopywell/viewmodels/home_viewmodel.dart';
+import 'package:shopywell/core/constants/constants.dart';
+import 'package:shopywell/presentation/view/home/home.dart';
+import 'package:shopywell/presentation/view/profile/profile.dart';
+import 'package:shopywell/presentation/viewmodels/home_viewmodel.dart';
 
 void main() => runApp(MyApp());
 
@@ -33,7 +34,9 @@ class MyApp extends StatelessWidget {
           ),
         );
       },
-      child: const Home(),
+      child: const Profile(),
     );
   }
 }
+
+
