@@ -3,8 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:shopywell/core/constants/constants.dart';
-import 'package:shopywell/presentation/view/home/home.dart';
-import 'package:shopywell/presentation/view/profile/profile.dart';
+import 'package:shopywell/core/routes/routes.dart';
 import 'package:shopywell/presentation/viewmodels/home_viewmodel.dart';
 
 void main() => runApp(MyApp());
@@ -21,8 +20,10 @@ class MyApp extends StatelessWidget {
       builder: (_, child) {
         return MultiProvider(
           providers: [
-           ChangeNotifierProvider<HomeViewmodel>(create: (_) => HomeViewmodel())
-],
+            ChangeNotifierProvider<HomeViewmodel>(
+              create: (_) => HomeViewmodel(),
+            ),
+          ],
           child: MaterialApp(
             debugShowCheckedModeBanner: false,
             title: StringConstants.appName,
@@ -30,13 +31,11 @@ class MyApp extends StatelessWidget {
               primarySwatch: Colors.blue,
               textTheme: GoogleFonts.montserratTextTheme(),
             ),
-            home: child,
+            initialRoute: AppRoutes.splash,
+            onGenerateRoute: RouteGenerator.generateRoute,
           ),
         );
       },
-      child: const Profile(),
     );
   }
 }
-
-

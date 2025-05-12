@@ -7,7 +7,6 @@ Widget onboardingHeader(
   int currentIndex,
   int pagesLength,
 ) {
-  // This widget is used to display the header of the onboarding screen.
   return Padding(
     padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
     child: Row(

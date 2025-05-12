@@ -1,3 +1,5 @@
+import 'package:shopywell/presentation/view/profile/profile.dart';
+
 class StringConstants {
   static const appName = 'Shopywell';
   static const appTagline = 'Your one-stop shop for everything!';
@@ -54,5 +56,6 @@ class StringConstants {
   static const ifsc = "IFSC Code";
   static const accountHolderName = "Account Holder’s Name";
   static const bankAccountNumber = "Bank Account Number";
-  static const bankAccountDetails = "'Bank Account Details'";
+  static const bankAccountDetails = "Bank Account Details";
+  static const profile = "Profile";
 }

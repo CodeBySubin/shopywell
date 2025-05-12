@@ -5,7 +5,7 @@ import 'package:shopywell/presentation/view/profile/widget/bank_account_details.
 import 'package:shopywell/presentation/view/profile/widget/business_details.dart';
 import 'package:shopywell/presentation/view/profile/widget/personal_details.dart';
 import 'package:shopywell/presentation/view/profile/widget/profile_image.dart';
-import 'package:shopywell/presentation/view/widgets/custom_button.dart';
+import 'package:shopywell/presentation/view/widgets/widgets.dart';
 
 class Profile extends StatelessWidget {
   const Profile({super.key});
@@ -13,11 +13,7 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: Icon(Icons.arrow_back_ios),
-        centerTitle: true,
-        title: Text("Profile"),
-      ),
+      appBar: commonAppbar(title: StringConstants.profile, context: context),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -30,7 +26,7 @@ class Profile extends StatelessWidget {
               BusinessDetails(),
               BankAccountDetails(),
               elevatedButton(text: StringConstants.save, onPressed: () {}),
-              SizedBox(height: 10,)
+              SizedBox(height: 10),
             ],
           ),
         ),

@@ -19,7 +19,6 @@ Widget onboardingPages(String image, String title, String description) {
               color: AppColor.textblack,
             ),
           ),
-
           Text(
             description,
             style: TextStyle(
